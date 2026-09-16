@@ -1,0 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+  body { @apply font-sans text-navy bg-white; }
+  ::selection { @apply bg-brand-orange text-white; }
+
+  ::-webkit-scrollbar { width: 10px; }
+  ::-webkit-scrollbar-track { @apply bg-steel-100; }
+  ::-webkit-scrollbar-thumb { @apply bg-navy rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-brand-orange; }
+}
+
+@layer components {
+  .container-custom { @apply max-w-full mx-auto px-6 lg:px-8; }
+  .section-padding { @apply py-16 md:py-24; }
+}
