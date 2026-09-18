@@ -16,7 +16,6 @@ export default function JourneyCarousel({ milestones = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [progress, setProgress] = useState(0);
-  const progressRef = useRef(null);
   const startTimeRef = useRef(Date.now());
 
   const total = milestones.length;
@@ -103,7 +102,7 @@ export default function JourneyCarousel({ milestones = [] }) {
         <SectionTitle
           eyebrow="Our Journey"
           title="Milestones That Shaped Us"
-          subtitle="From a small warehouse in Srikalahasti to a trusted steel supplier across South India."
+          subtitle="From a small workshop in Pondicherry to a trusted iron & steel works across Tamil Nadu and Andhra Pradesh."
           align="center"
         />
 
@@ -121,24 +120,22 @@ export default function JourneyCarousel({ milestones = [] }) {
         >
           {/* Main card */}
           <div className="relative bg-white rounded-3xl overflow-hidden shadow-2xl border border-steel-100">
-            <div className="grid lg:grid-cols-5 min-h-[500px] md:min-h-[560px]">
-              {/* Image side — 2 cols */}
-              <div className="lg:col-span-2 relative overflow-hidden bg-navy min-h-[240px] lg:min-h-full">
+            {/* 50/50 split — no forced height so images display fully */}
+            <div className="grid lg:grid-cols-2">
+              {/* Image side — 50% width, full image visible */}
+              <div className="relative overflow-hidden bg-white min-h-[280px] lg:min-h-[560px] flex items-center justify-center">
                 <AnimatePresence mode="wait">
                   <motion.img
                     key={activeIndex}
                     src={current.image}
                     alt={current.title}
-                    initial={{ opacity: 0, scale: 1.1 }}
+                    initial={{ opacity: 0, scale: 1.05 }}
                     animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 1.05 }}
+                    exit={{ opacity: 0, scale: 1.02 }}
                     transition={{ duration: 0.7, ease: "easeOut" }}
-                    className="absolute inset-0 w-full h-full object-cover"
+                    className="absolute inset-0 w-full h-full object-contain object-center"
                   />
                 </AnimatePresence>
-
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-navy/20 lg:bg-gradient-to-r lg:from-navy/40 lg:to-navy/80" />
 
                 {/* Year badge */}
                 <motion.div
@@ -160,15 +157,15 @@ export default function JourneyCarousel({ milestones = [] }) {
 
                 {/* Tag chip */}
                 <div className="absolute bottom-6 left-6 lg:bottom-8 lg:left-8 z-10">
-                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-sm border border-white/30 text-white text-[11px] font-bold uppercase tracking-wider">
+                  <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-navy/60 backdrop-blur-sm border border-white/30 text-white text-[11px] font-bold uppercase tracking-wider">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse" />
                     {current.tag}
                   </span>
                 </div>
               </div>
 
-              {/* Content side — 3 cols */}
-              <div className="lg:col-span-3 relative p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
+              {/* Content side — 50% width */}
+              <div className="relative p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
                 {/* Big faded number background */}
                 <div className="absolute top-4 right-4 md:top-6 md:right-8 font-display text-[120px] md:text-[180px] font-black text-navy/[0.04] leading-none select-none pointer-events-none">
                   {String(activeIndex + 1).padStart(2, "0")}

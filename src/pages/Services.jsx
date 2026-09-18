@@ -1,11 +1,5 @@
 import { motion } from "framer-motion";
 import {
-  FaTruck,
-  FaCut,
-  FaBoxes,
-  FaWarehouse,
-  FaHeadset,
-  FaClipboardCheck,
   FaPhoneAlt,
   FaWhatsapp,
   FaArrowRight,
@@ -13,83 +7,51 @@ import {
   FaFileAlt,
   FaHandshake,
   FaShippingFast,
+  FaClipboardCheck,
+  FaTools,
+  FaIndustry,
 } from "react-icons/fa";
 import Container from "../components/ui/Container";
 import PageBanner from "../components/shared/PageBanner";
 import SectionTitle from "../components/ui/SectionTitle";
 import { COMPANY, WHATSAPP_LINK } from "../utils/constants";
-import { fadeUp, staggerContainer } from "../utils/animations";
+import { serviceCategories } from "../data/services";
 
-// ================= DATA =================
-
-const services = [
-  {
-    icon: FaTruck,
-    title: "Pan-India Delivery",
-    text: "Fast, secure transport with our dedicated fleet across all major cities and industrial zones in South India.",
-    tag: "Most Popular",
-  },
-  {
-    icon: FaCut,
-    title: "Custom Cutting & Sizing",
-    text: "Precision cutting to your exact specifications — lengths, angles, and shapes for immediate installation.",
-  },
-  {
-    icon: FaBoxes,
-    title: "Bulk Supply",
-    text: "Ready stock for large projects. Wholesale pricing with guaranteed quality for contractors and builders.",
-  },
-  {
-    icon: FaWarehouse,
-    title: "Warehouse & Storage",
-    text: "Safe, dry storage for your steel — we hold inventory until your project is ready for delivery.",
-  },
-  {
-    icon: FaHeadset,
-    title: "Expert Consultation",
-    text: "Free guidance from experienced staff to help you choose the right grade, size, and quantity.",
-  },
-  {
-    icon: FaClipboardCheck,
-    title: "Quality Assurance",
-    text: "Every batch is inspected and certified. Mill test certificates available on request.",
-  },
-];
-
+// ================= PROCESS =================
 const process = [
   {
     step: "01",
     icon: FaFileAlt,
     title: "Share Your Requirement",
-    text: "Call, WhatsApp, or email us with your product list, quantity, and delivery location.",
+    text: "Send us your size, design, or reference photo via call, WhatsApp, or email.",
   },
   {
     step: "02",
     icon: FaClipboardCheck,
     title: "Get a Custom Quote",
-    text: "We'll send you a detailed quote within hours, including delivery timeline and pricing.",
+    text: "We'll send a detailed quote with timeline and pricing within hours.",
   },
   {
     step: "03",
-    icon: FaHandshake,
-    title: "Confirm & Schedule",
-    text: "Once approved, we lock in your order and schedule dispatch at your convenience.",
+    icon: FaTools,
+    title: "Fabrication Begins",
+    text: "Skilled craftsmen build your product with precision and quality materials.",
   },
   {
     step: "04",
     icon: FaShippingFast,
-    title: "Fast Delivery",
-    text: "Your order is loaded, dispatched, and tracked until it reaches your site.",
+    title: "Delivery & Installation",
+    text: "We deliver and install — ensuring everything fits and works perfectly.",
   },
 ];
 
 const features = [
-  "ISI-certified products from trusted mills",
-  "Transparent pricing — no hidden charges",
-  "Same-day dispatch for ready stock",
-  "Real-time updates on delivery status",
-  "Dedicated account manager for B2B clients",
-  "Mill test certificates with every order",
+  "Custom sizes — built to your exact dimensions",
+  "Premium iron and stainless steel (SS 202 & 304)",
+  "Skilled craftsmen with 10+ years experience",
+  "On-time delivery across Pondicherry & nearby districts",
+  "Installation support for shutters, doors, railings",
+  "Free site visit and quote for bulk orders",
 ];
 
 export default function Services() {
@@ -98,91 +60,174 @@ export default function Services() {
       {/* ================= BANNER ================= */}
       <PageBanner
         title="Our Services"
-        subtitle="More than just steel supply — we're your complete steel partner from enquiry to delivery."
+        subtitle="Iron works, stainless steel fabrication, and rolling shutters — all under one roof."
         breadcrumbs={[
           { label: "Home", path: "/" },
           { label: "Services" },
         ]}
       />
 
-      {/* ================= INTRO + SERVICES GRID ================= */}
+      {/* ================= INTRO + JUMP LINKS ================= */}
       <section className="section-padding bg-white">
         <Container>
           <SectionTitle
-            eyebrow="What We Offer"
-            title="Complete Steel Solutions Under One Roof"
-            subtitle="From sourcing to delivery, we handle every step so you can focus on your project."
+            eyebrow="What We Do"
+            title="Complete Fabrication Services"
+            subtitle="From single custom cots to full commercial fit-outs — we handle every stage in-house."
             align="center"
           />
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-            {services.map((service, i) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
-                whileHover={{ y: -8 }}
-                className="group relative bg-white rounded-2xl p-6 md:p-7 border border-steel-100 shadow-card hover:shadow-card-hover hover:border-brand-orange/40 transition-all overflow-hidden"
+          {/* Quick category jump */}
+          <div className="flex flex-wrap justify-center gap-3">
+            {serviceCategories.map((cat) => (
+              <a
+                key={cat.id}
+                href={`#${cat.id}`}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-steel-50 border border-steel-200 hover:border-brand-orange hover:bg-white transition-all font-bold text-sm text-navy"
               >
-                {/* Hover accent bar */}
-                <div className="absolute top-0 left-0 h-1 w-0 bg-brand-orange group-hover:w-full transition-all duration-500" />
-
-                {/* Optional tag */}
-                {service.tag && (
-                  <span className="absolute top-4 right-4 px-2.5 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-[10px] font-bold uppercase tracking-wider">
-                    {service.tag}
-                  </span>
-                )}
-
-                {/* Icon */}
-                <div className="w-14 h-14 rounded-xl bg-navy group-hover:bg-brand-orange flex items-center justify-center mb-5 transition-colors duration-300 shadow-lg shadow-navy/10 group-hover:shadow-brand-orange/30">
-                  <service.icon className="text-brand-orange group-hover:text-white text-xl transition-colors" />
-                </div>
-
-                {/* Content */}
-                <h3 className="font-display text-xl font-bold text-navy mb-2">
-                  {service.title}
-                </h3>
-                <p className="text-sm text-steel-500 leading-relaxed mb-4">
-                  {service.text}
-                </p>
-
-                {/* Learn more link */}
-                <div className="inline-flex items-center gap-2 text-brand-orange font-bold text-xs uppercase tracking-wider group-hover:gap-3 transition-all">
-                  Learn More
-                  <FaArrowRight className="text-[10px]" />
-                </div>
-              </motion.div>
+                <span>{cat.emoji}</span>
+                {cat.label}
+              </a>
             ))}
           </div>
         </Container>
       </section>
 
+      {/* ================= CATEGORY SECTIONS ================= */}
+      {serviceCategories.map((category, catIdx) => (
+        <section
+          key={category.id}
+          id={category.id}
+          className={`section-padding relative overflow-hidden scroll-mt-24 ${
+            catIdx % 2 === 0 ? "bg-steel-50" : "bg-white"
+          }`}
+        >
+          {/* Background dot pattern */}
+          <div
+            className="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, #0A1B33 1px, transparent 0)",
+              backgroundSize: "32px 32px",
+            }}
+          />
+
+          <Container className="relative z-10">
+            {/* Category header */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12"
+            >
+              <div className="max-w-2xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-14 h-14 rounded-2xl bg-navy flex items-center justify-center shadow-lg shadow-navy/20">
+                    <category.icon className="text-brand-orange text-2xl" />
+                  </div>
+                  <span className="text-3xl">{category.emoji}</span>
+                </div>
+
+                <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold text-navy leading-tight mb-3">
+                  {category.label}
+                </h2>
+                <p className="text-brand-orange font-bold text-sm uppercase tracking-wider mb-3">
+                  {category.tagline}
+                </p>
+                <p className="text-steel-500 leading-relaxed">
+                  {category.description}
+                </p>
+              </div>
+
+              <div className="shrink-0">
+                <a
+                  href={WHATSAPP_LINK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-brand-orange text-white font-bold text-sm shadow-lg shadow-brand-orange/30 hover:bg-brand-orange-dark transition-colors"
+                >
+                  <FaWhatsapp className="text-lg" />
+                  Enquire Now
+                </a>
+              </div>
+            </motion.div>
+
+            {/* Services grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {category.services.map((service, i) => (
+                <motion.div
+                  key={service.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-60px" }}
+                  transition={{ duration: 0.5, delay: i * 0.08 }}
+                  whileHover={{ y: -8 }}
+                  className="group relative bg-white rounded-2xl p-6 md:p-7 border border-steel-100 shadow-card hover:shadow-card-hover hover:border-brand-orange/40 transition-all overflow-hidden"
+                >
+                  {/* Hover accent bar */}
+                  <div className="absolute top-0 left-0 h-1 w-0 bg-brand-orange group-hover:w-full transition-all duration-500" />
+
+                  {/* Number badge */}
+                  <div className="absolute top-5 right-5 w-9 h-9 rounded-full bg-steel-50 group-hover:bg-brand-orange/10 flex items-center justify-center transition-colors">
+                    <span className="font-display font-black text-xs text-steel-500 group-hover:text-brand-orange transition-colors">
+                      {String(catIdx * 6 + i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+
+                  {/* Content */}
+                  <div className="pr-12">
+                    <h3 className="font-display text-lg font-bold text-navy mb-2 group-hover:text-brand-orange transition-colors">
+                      {service.title}
+                    </h3>
+                    <p className="text-sm text-steel-500 leading-relaxed">
+                      {service.text}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      ))}
+
       {/* ================= PROCESS ================= */}
-      <section className="section-padding bg-steel-50 relative overflow-hidden">
-        {/* Background decoration */}
+      <section className="section-padding bg-navy relative overflow-hidden">
         <div
-          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          className="absolute inset-0 opacity-30 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 2px 2px, #0A1B33 1px, transparent 0)",
-            backgroundSize: "32px 32px",
+              "linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
           }}
         />
 
-        <Container className="relative z-10">
-          <SectionTitle
-            eyebrow="How We Work"
-            title="A Simple 4-Step Process"
-            subtitle="From first enquiry to final delivery — smooth, transparent, and fast."
-            align="center"
-          />
+        <motion.div
+          animate={{ x: [0, 30, 0], y: [0, -20, 0] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute -top-20 -right-20 w-[400px] h-[400px] bg-brand-orange/15 rounded-full blur-3xl pointer-events-none"
+        />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 relative">
-            {/* Connector line (desktop only) */}
-            <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-orange/30 via-brand-orange to-brand-orange/30 -z-0" />
+        <Container className="relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <div className="inline-flex items-center gap-2 mb-4">
+              <span className="w-8 h-0.5 bg-brand-orange rounded-full" />
+              <span className="text-brand-orange text-xs md:text-sm font-bold uppercase tracking-[0.2em]">
+                How We Work
+              </span>
+            </div>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-tight mb-4">
+              A Simple 4-Step Process
+            </h2>
+            <p className="text-white/70 text-base md:text-lg">
+              From first enquiry to final installation — smooth, transparent,
+              and fast.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+            {/* Connector line */}
+            <div className="hidden lg:block absolute top-10 left-[12.5%] right-[12.5%] h-0.5 bg-gradient-to-r from-brand-orange/30 via-brand-orange to-brand-orange/30" />
 
             {process.map((item, i) => (
               <motion.div
@@ -193,23 +238,21 @@ export default function Services() {
                 transition={{ duration: 0.5, delay: i * 0.12 }}
                 className="relative z-10"
               >
-                <div className="group bg-white rounded-2xl p-6 md:p-7 border border-steel-100 hover:border-brand-orange/40 hover:shadow-card-hover hover:-translate-y-2 transition-all duration-300 h-full">
-                  {/* Icon on circle */}
+                <div className="group bg-white/5 backdrop-blur-sm border border-white/10 hover:border-brand-orange/40 rounded-2xl p-6 md:p-7 hover:-translate-y-2 transition-all duration-300 h-full">
+                  {/* Icon circle */}
                   <div className="relative mb-5">
-                    <div className="w-16 h-16 rounded-full bg-navy group-hover:bg-brand-orange flex items-center justify-center shadow-lg shadow-navy/20 group-hover:shadow-brand-orange/40 transition-all duration-300 ring-4 ring-steel-50">
+                    <div className="w-16 h-16 rounded-full bg-brand-orange flex items-center justify-center shadow-lg shadow-brand-orange/40 ring-4 ring-navy">
                       <item.icon className="text-white text-xl" />
                     </div>
-
-                    {/* Step number badge */}
-                    <span className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-brand-orange text-white text-[10px] font-black flex items-center justify-center shadow-md">
+                    <span className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-white text-navy text-[10px] font-black flex items-center justify-center shadow-md">
                       {item.step}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-lg font-bold text-navy mb-2">
+                  <h3 className="font-display text-lg font-bold text-white mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-steel-500 leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed">
                     {item.text}
                   </p>
                 </div>
@@ -233,14 +276,13 @@ export default function Services() {
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=80"
-                  alt="Steel delivery truck"
+                  src="https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=900&q=80"
+                  alt="Iron & SS fabrication workshop"
                   className="w-full h-[400px] md:h-[500px] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent" />
               </div>
 
-              {/* Floating stat card */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -250,14 +292,14 @@ export default function Services() {
               >
                 <div className="flex items-center gap-4">
                   <div className="w-12 h-12 rounded-xl bg-brand-orange flex items-center justify-center">
-                    <FaTruck className="text-white text-xl" />
+                    <FaTools className="text-white text-xl" />
                   </div>
                   <div>
                     <div className="font-display text-2xl font-black leading-none">
-                      500+
+                      1000+
                     </div>
                     <div className="text-[10px] uppercase tracking-wider opacity-70 mt-1">
-                      Deliveries / Year
+                      Projects Delivered
                     </div>
                   </div>
                 </div>
@@ -273,8 +315,8 @@ export default function Services() {
             >
               <SectionTitle
                 eyebrow="Why Our Services"
-                title="Reliable Service That Matches Our Steel"
-                subtitle="We don't just supply steel — we deliver on promises. Here's what makes our service stand out:"
+                title="Craftsmanship That Matches Our Materials"
+                subtitle="We don't just fabricate — we deliver on promises. Here's what makes our service stand out:"
               />
 
               <div className="space-y-4 mb-8">
@@ -341,7 +383,7 @@ export default function Services() {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4 max-w-2xl mx-auto"
           >
-            Need a Custom Steel Solution?
+            Need a Custom Fabrication?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -350,8 +392,8 @@ export default function Services() {
             transition={{ delay: 0.1 }}
             className="text-white/70 text-base md:text-lg mb-8 max-w-2xl mx-auto"
           >
-            Tell us what you need — we'll handle the sourcing, cutting, and
-            delivery. Fast quotes, no obligation.
+            Tell us your size, design, or reference — we'll handle the rest.
+            Fast quotes, no obligation.
           </motion.p>
 
           <motion.div

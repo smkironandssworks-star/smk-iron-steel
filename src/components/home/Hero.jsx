@@ -26,13 +26,13 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1920&q=80"
+          src="/public/Home_Bg.png"
           alt="Steel industry"
           className="w-full h-full object-cover"
         />
       </motion.div>
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/30" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-navy via-navy/30 to-navy/30" />
 
       <div
         className="absolute inset-0 z-10 opacity-30 pointer-events-none"
@@ -76,7 +76,7 @@ export default function Hero() {
             custom={1}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
           >
-            Quality Steel,
+            Quality Steel & Iron Works,
             <br />
             <span className="text-brand-orange">Trusted Service</span>
           </motion.h1>

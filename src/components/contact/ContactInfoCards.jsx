@@ -1,6 +1,12 @@
 import { motion } from "framer-motion";
-import { FaPhoneAlt, FaWhatsapp, FaEnvelope, FaMapMarkerAlt, FaExternalLinkAlt } from "react-icons/fa";
-import { COMPANY, WHATSAPP_LINK } from "../../utils/constants";
+import {
+  FaPhoneAlt,
+  FaWhatsapp,
+  FaEnvelope,
+  FaMapMarkerAlt,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
+import { COMPANY, WHATSAPP_LINK, MAPS_LINK } from "../../utils/constants";
 
 const cards = [
   {
@@ -34,9 +40,9 @@ const cards = [
   {
     icon: FaMapMarkerAlt,
     title: "Visit Us",
-    primary: "Srikalahasti",
+    primary: "Pondicherry",
     secondary: COMPANY.address,
-    href: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.address)}`,
+    href: MAPS_LINK,
     external: true,
     color: "from-orange-500 to-orange-600",
     action: "Get Directions",

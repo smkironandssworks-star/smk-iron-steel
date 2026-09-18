@@ -7,7 +7,7 @@ import {
   FaTruck,
   FaAward,
   FaUsers,
-  FaBoxes,
+  FaHammer,
   FaCheckCircle,
   FaWhatsapp,
   FaPhoneAlt,
@@ -25,13 +25,13 @@ const values = [
   {
     icon: FaBullseye,
     title: "Our Mission",
-    text: "To supply high-quality iron and steel products that empower India's construction and infrastructure growth.",
+    text: "To craft durable iron and stainless steel products that serve families, businesses, and communities across South India — with honest pricing and quality craftsmanship.",
     accent: "from-brand-orange/20 to-transparent",
   },
   {
     icon: FaEye,
     title: "Our Vision",
-    text: "To become the most trusted steel partner for businesses of every size across South India.",
+    text: "To become the most trusted iron works and SS fabrication partner for homes, hotels, and commercial spaces in Tamil Nadu, Puducherry, and Andhra Pradesh.",
     accent: "from-navy/20 to-transparent",
   },
 ];
@@ -39,40 +39,40 @@ const values = [
 const whyChooseUs = [
   {
     icon: FaShieldAlt,
-    title: "Certified Quality",
-    text: "Every product is sourced from ISI-certified mills and tested for strength and durability.",
+    title: "Premium Materials",
+    text: "We use high-grade iron and stainless steel (SS 202 & SS 304) — built to last for years.",
   },
   {
     icon: FaHandshake,
     title: "Trusted Service",
-    text: "10+ years of relationships built on transparency, honest pricing, and reliable delivery.",
+    text: "10+ years of relationships built on transparency, honest pricing, and on-time delivery.",
   },
   {
     icon: FaTruck,
-    title: "Pan-India Delivery",
-    text: "Fast and secure transport with real-time coordination from our Srikalahasti facility.",
+    title: "Local + Outstation Delivery",
+    text: "Fast delivery across Pondicherry, Tamil Nadu, and Andhra Pradesh with our own transport.",
   },
   {
-    icon: FaAward,
-    title: "Wide Range",
-    text: "TMT Bars, MS Pipes, Sections, Sheets, Angles & Channels — all under one roof.",
+    icon: FaHammer,
+    title: "Custom Fabrication",
+    text: "Iron cots, SS furniture, doors, railings, and shutters — all made to your exact size and design.",
   },
   {
     icon: FaUsers,
-    title: "Dedicated Team",
-    text: "Experienced staff to help you pick the right product for your specific application.",
+    title: "Skilled Craftsmen",
+    text: "Experienced fabricators who bring precision, strength, and finish to every product.",
   },
   {
-    icon: FaBoxes,
-    title: "Bulk Supply",
-    text: "Ready stock for large projects with competitive wholesale pricing.",
+    icon: FaAward,
+    title: "Installation Support",
+    text: "Complete installation for shutters, railings, and doors — handled by our own team.",
   },
 ];
 
 const stats = [
   { num: "10+", label: "Years Experience" },
   { num: "500+", label: "Happy Clients" },
-  { num: "50+", label: "Product Types" },
+  { num: "1000+", label: "Products Delivered" },
   { num: "24/7", label: "Support" },
 ];
 
@@ -81,52 +81,52 @@ const timeline = [
     year: "2014",
     title: "Company Founded",
     tag: "Beginning",
-    text: "SMK Iron & Steel opened its doors in Srikalahasti, Andhra Pradesh with a small warehouse and big ambitions.",
+    text: "SMK Iron & Steel Works opened its doors in Pondicherry with a small workshop and a big vision — to build quality iron products for local families.",
     image:
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80",
+      "/public/Company_Founded1.png",
     points: [
-      "Started with 3 product categories",
-      "First 10 clients signed in month one",
-      "Set up base in Srikalahasti",
+      "Started as a small iron works workshop",
+      "First 10 iron cots delivered",
+      "Set up base in Ganapathi Chettikulam",
     ],
   },
   {
     year: "2017",
-    title: "Expanded Product Range",
+    title: "Stainless Steel Division",
     tag: "Growth",
-    text: "Added MS Pipes, Steel Sheets, and Sections to meet growing demand from construction clients.",
+    text: "Added stainless steel fabrication to our services — SS cots, sofas, chairs, tables, and custom SS work for homes and businesses.",
     image:
-      "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80",
+      "/public/Stainless_Steel_Division.png",
     points: [
-      "Introduced MS Pipes & Sections",
-      "Warehouse doubled in size",
-      "Crossed 100+ active clients",
+      "Launched SS fabrication services",
+      "Serving hotels & hostels",
+      "Crossed 100+ happy clients",
     ],
   },
   {
     year: "2020",
-    title: "Pan-India Delivery",
+    title: "Rolling Shutters & Doors",
     tag: "Expansion",
-    text: "Started supplying to clients across multiple states with a dedicated transport fleet.",
+    text: "Expanded into rolling shutter supply and installation — both manual and automatic — for shops, garages, and commercial buildings.",
     image:
-      "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80",
+      "/public/Rolling_Shutters_Doors.png",
     points: [
-      "Own fleet of delivery trucks",
-      "Serving 5+ states",
-      "24/7 dispatch support",
+      "Manual & automatic shutters",
+      "Professional installation team",
+      "Serving Pondicherry & nearby districts",
     ],
   },
   {
     year: "2024",
     title: "10 Years of Trust",
     tag: "Milestone",
-    text: "Crossed 500+ happy clients and celebrated a decade of trusted service across South India.",
+    text: "Crossed 500+ completed projects and celebrated a decade of trusted fabrication across Tamil Nadu and Andhra Pradesh.",
     image:
-      "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=1200&q=80",
+      "/public/10_years.png",
     points: [
-      "500+ happy clients",
-      "10+ years of service",
-      "Full product portfolio",
+      "500+ projects delivered",
+      "10+ years of experience",
+      "Iron, SS & Shutters under one roof",
     ],
   },
 ];
@@ -139,7 +139,7 @@ export default function About() {
       {/* ================= BANNER ================= */}
       <PageBanner
         title="About Us"
-        subtitle="A decade of supplying quality steel — building trust one delivery at a time."
+        subtitle="A decade of crafting quality iron cots, SS furniture, and rolling shutters — building trust one project at a time."
         breadcrumbs={[
           { label: "Home", path: "/" },
           { label: "About Us" },
@@ -158,88 +158,53 @@ export default function About() {
         />
 
         <Container>
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            {/* Image side */}
+          {/* Wider image column: 3/5 for image, 2/5 for text */}
+          <div className="grid lg:grid-cols-5 gap-10 lg:gap-14 items-center">
+            {/* Image side — takes 3 columns */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
-              className="relative"
+              className="lg:col-span-3"
             >
-              <div className="absolute -inset-4 bg-brand-orange/10 rounded-3xl blur-2xl" />
-
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=900&q=80"
-                  alt="SMK Iron & Steel warehouse"
-                  className="w-full h-[400px] md:h-[520px] object-cover"
+                  src="/About1_SMK.png"
+                  alt="SMK Iron & Steel Works workshop"
+                  className="w-full h-auto block"
+                  loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/50 via-transparent to-transparent" />
               </div>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.4, type: "spring" }}
-                className="absolute -bottom-6 -right-4 md:right-6 bg-brand-orange text-white rounded-2xl p-5 md:p-6 shadow-2xl shadow-brand-orange/40"
-              >
-                <div className="font-display text-3xl md:text-4xl font-black leading-none">
-                  10+
-                </div>
-                <div className="text-[10px] md:text-xs font-bold uppercase tracking-wider mt-1 opacity-90">
-                  Years of Trust
-                </div>
-              </motion.div>
-
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5 }}
-                className="absolute top-6 -left-4 md:left-6 bg-white rounded-xl shadow-xl p-3 md:p-4 flex items-center gap-3"
-              >
-                <div className="w-10 h-10 rounded-lg bg-navy flex items-center justify-center">
-                  <FaShieldAlt className="text-brand-orange" />
-                </div>
-                <div>
-                  <div className="font-display font-bold text-navy text-sm">
-                    ISI Certified
-                  </div>
-                  <div className="text-[10px] text-steel-500">
-                    Quality Assured
-                  </div>
-                </div>
-              </motion.div>
             </motion.div>
 
-            {/* Text side */}
+            {/* Text side — takes 2 columns */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.7 }}
+              className="lg:col-span-2"
             >
               <SectionTitle
                 eyebrow="Our Story"
-                title="Building Strength Since 2014"
-                subtitle="SMK Iron & Steel began as a small family business in Srikalahasti, Andhra Pradesh. Over a decade later, we're a trusted supplier of high-quality iron and steel products to construction companies, fabricators, and industrial clients across South India."
+                title="Crafting Strength Since 2014"
+                subtitle="SMK Iron & Steel Works began as a small family workshop in Pondicherry. Over a decade later, we're a trusted fabricator of iron cots, stainless steel furniture, doors, railings, and rolling shutters for homes, hotels, and businesses across South India."
               />
 
               <p className="text-steel-500 leading-relaxed mb-6">
-                Every product we sell is carefully sourced from certified mills,
-                inspected for quality, and delivered with the same personal
-                service that started it all. Whether you need a single length of
-                pipe or a bulk order of TMT bars, you get the same attention.
+                Every product we make is built from carefully selected materials,
+                crafted by skilled hands, and finished with the same personal care
+                that started it all. Whether you need a single cot or a full shop
+                fit-out, you get the same attention.
               </p>
 
               <div className="grid grid-cols-2 gap-4 mb-8">
                 {[
-                  "ISI Certified Mills",
+                  "Premium Iron & SS",
+                  "Custom Sizes",
                   "On-Time Delivery",
-                  "Bulk Discounts",
-                  "Expert Guidance",
+                  "Installation Support",
                 ].map((item, i) => (
                   <motion.div
                     key={item}
@@ -250,9 +215,7 @@ export default function About() {
                     className="flex items-center gap-2"
                   >
                     <FaCheckCircle className="text-brand-orange shrink-0" />
-                    <span className="text-sm font-semibold text-navy">
-                      {item}
-                    </span>
+                    <span className="text-sm font-semibold text-navy">{item}</span>
                   </motion.div>
                 ))}
               </div>
@@ -316,7 +279,7 @@ export default function About() {
           <SectionTitle
             eyebrow="Why Choose Us"
             title="Reasons Our Clients Trust Us"
-            subtitle="Six reasons why businesses across South India choose SMK Iron & Steel."
+            subtitle="Six reasons why homes, hotels, and businesses across South India choose SMK Iron & Steel Works."
             align="center"
           />
 
@@ -415,7 +378,7 @@ export default function About() {
             viewport={{ once: true }}
             className="font-display text-3xl md:text-5xl font-extrabold text-white leading-tight mb-4 max-w-2xl mx-auto"
           >
-            Ready to Work with Us?
+            Ready to Build Something with Us?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -424,8 +387,9 @@ export default function About() {
             transition={{ delay: 0.1 }}
             className="text-white/90 text-base md:text-lg mb-8 max-w-2xl mx-auto"
           >
-            Let's discuss your steel requirements. Our team is ready to help you
-            find the right products at the best price.
+            Whether it's a custom iron cot, SS railing, or rolling shutter —
+            our team is ready to help you find the right solution at the best
+            price.
           </motion.p>
 
           <motion.div

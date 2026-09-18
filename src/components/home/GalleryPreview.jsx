@@ -6,34 +6,34 @@ import SectionTitle from "../ui/SectionTitle";
 
 const galleryImages = [
   {
-    src: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80",
-    label: "TMT Bars",
-    size: "large", // 🔥 first card is bigger
+    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+    label: "Iron Cots",
+    size: "large",
   },
   {
-    src: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=800&q=80",
-    label: "MS Pipes",
+    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
+    label: "SS Furniture",
     size: "normal",
   },
   {
-    src: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=800&q=80",
-    label: "Steel Sheets",
+    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
+    label: "SS Doors & Railings",
     size: "normal",
   },
   {
-    src: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=800&q=80",
-    label: "Steel Sections",
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+    label: "Manual Shutters",
     size: "normal",
   },
   {
-    src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-    label: "Stock Yard",
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
+    label: "Automatic Shutters",
     size: "normal",
   },
   {
-    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80",
-    label: "Delivery",
-    size: "wide", // 🔥 last card is wider
+    src: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80",
+    label: "Our Workshop",
+    size: "wide",
   },
 ];
 
@@ -84,7 +84,8 @@ export default function GalleryPreview() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionTitle
             eyebrow="Our Gallery"
-            title="Explore Our Products & Facilities"
+            title="Explore Our Work"
+            subtitle="A glimpse into our workshop, products, and installations."
             light
             className="mb-0"
           />

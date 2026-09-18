@@ -11,7 +11,12 @@ import PageBanner from "../components/shared/PageBanner";
 import SectionTitle from "../components/ui/SectionTitle";
 import ContactInfoCards from "../components/contact/ContactInfoCards";
 import ContactForm from "../components/contact/ContactForm";
-import { COMPANY, WHATSAPP_LINK } from "../utils/constants";
+import {
+  COMPANY,
+  WHATSAPP_LINK,
+  MAPS_LINK,
+  MAPS_EMBED_SRC,
+} from "../utils/constants";
 
 export default function Contact() {
   return (
@@ -19,7 +24,7 @@ export default function Contact() {
       {/* ================= BANNER ================= */}
       <PageBanner
         title="Contact Us"
-        subtitle="We're here to help. Reach out via call, WhatsApp, email, or visit our facility."
+        subtitle="We're here to help. Reach out via call, WhatsApp, email, or visit our workshop in Pondicherry."
         breadcrumbs={[
           { label: "Home", path: "/" },
           { label: "Contact Us" },
@@ -140,7 +145,7 @@ export default function Contact() {
                     <FaMapMarkerAlt className="text-brand-orange" />
                   </div>
                   <h3 className="font-display text-lg font-bold text-navy">
-                    Visit Our Facility
+                    Visit Our Workshop
                   </h3>
                 </div>
 
@@ -149,7 +154,7 @@ export default function Contact() {
                 </p>
 
                 <a
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(COMPANY.address)}`}
+                  href={MAPS_LINK}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 text-brand-orange font-bold text-sm hover:underline"
@@ -168,8 +173,8 @@ export default function Contact() {
         <Container className="py-12 md:py-16">
           <SectionTitle
             eyebrow="Find Us"
-            title="Visit Our Facility"
-            subtitle="Located in Srikalahasti, Andhra Pradesh — easily accessible from Chennai, Tirupati, and Nellore."
+            title="Visit Our Workshop"
+            subtitle="Located in Pondicherry — easily accessible from Chennai, Villupuram, Cuddalore, and nearby districts."
             align="center"
           />
 
@@ -182,8 +187,8 @@ export default function Contact() {
           >
             <div className="aspect-[16/9] w-full">
               <iframe
-                title="SMK Iron & Steel Location"
-                src="https://www.google.com/maps?q=Srikalahasti,+Andhra+Pradesh&output=embed"
+                title="SMK Iron & Steel Works Location"
+                src={MAPS_EMBED_SRC}
                 className="w-full h-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -200,7 +205,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <div className="font-display font-bold text-navy text-sm mb-1">
-                    SMK Iron & Steel
+                    SMK Iron & Steel Works
                   </div>
                   <p className="text-xs text-steel-500 leading-relaxed">
                     {COMPANY.address}

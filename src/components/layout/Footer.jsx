@@ -41,13 +41,15 @@ export default function Footer() {
 
       <Container className="relative z-10">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 py-16">
+          {/* Column 1 — Logo + about */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-xl p-4 inline-block mb-5">
               <Logo />
             </div>
             <p className="text-sm leading-relaxed mb-5">
-              Your trusted partner for high-quality iron and steel products —
-              serving construction and industrial sectors across India.
+              Your trusted partner for custom iron cots, stainless steel
+              fabrication, and rolling shutters — serving homes, hotels, and
+              businesses across South India.
             </p>
             <div className="flex items-center gap-2">
               {socials.map(({ icon: Icon, href, label }) => (
@@ -66,6 +68,7 @@ export default function Footer() {
             </div>
           </div>
 
+          {/* Column 2 — Quick Links */}
           <div>
             <h4 className="font-display font-bold text-white text-lg mb-5 relative inline-block">
               Quick Links
@@ -86,6 +89,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 3 — Contact */}
           <div>
             <h4 className="font-display font-bold text-white text-lg mb-5 relative inline-block">
               Contact Us
@@ -119,6 +123,7 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Column 4 — Hours */}
           <div>
             <h4 className="font-display font-bold text-white text-lg mb-5 relative inline-block">
               Working Hours
@@ -146,12 +151,18 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* Bottom bar */}
         <div className="border-t border-white/10 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs">
           <p>
-            © {year} <span className="text-white font-semibold">{COMPANY.name}</span>. All Rights Reserved.
+            © {year}{" "}
+            <span className="text-white font-semibold">{COMPANY.name}</span>.
+            All Rights Reserved.
           </p>
           <p className="flex items-center gap-2">
-            Designed for a <span className="text-brand-orange font-semibold">Stronger Tomorrow</span>
+            Built with{" "}
+            <span className="text-brand-orange font-semibold">
+              Strength & Craftsmanship
+            </span>
           </p>
         </div>
       </Container>

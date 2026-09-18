@@ -9,13 +9,16 @@ import { products } from "../../data/products";
 export default function ProductGrid() {
   return (
     <section className="section-padding bg-steel-50 relative overflow-hidden">
+      {/* Subtle top accent */}
+      <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-brand-orange to-transparent opacity-40" />
+
       <Container>
         {/* Header row */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
           <SectionTitle
             eyebrow="Our Products"
-            title="Premium Quality Iron & Steel Products"
-            subtitle="We supply a wide range of iron and steel products, sourced from trusted mills and tested for superior strength, durability and performance."
+            title="Crafted for Strength & Style"
+            subtitle="From iron cots and stainless steel furniture to custom doors, railings, and rolling shutters — every product is built to your size and design."
             className="mb-0"
           />
 

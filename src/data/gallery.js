@@ -1,93 +1,115 @@
 export const galleryItems = [
-  // TMT Bars
+  // ═══════════════════════════════════════════════════
+  // IRON COTS
+  // ═══════════════════════════════════════════════════
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&q=80",
-    label: "TMT Bars Stack",
-    category: "products",
+    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=600&q=80",
+    label: "Iron Cot - Premium",
+    category: "iron-cots",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=600&q=80",
-    label: "Steel Rods Bundle",
-    category: "products",
+    src: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?w=600&q=80",
+    label: "Iron Cot - Double",
+    category: "iron-cots",
   },
-
-  // MS Pipes
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80",
-    label: "MS Pipes Ready for Dispatch",
-    category: "products",
+    src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&q=80",
+    label: "Iron Cot - Bunk Style",
+    category: "iron-cots",
   },
+
+  // ═══════════════════════════════════════════════════
+  // STAINLESS STEEL
+  // ═══════════════════════════════════════════════════
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=600&q=80",
-    label: "Steel Coils",
-    category: "products",
+    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=600&q=80",
+    label: "SS Furniture",
+    category: "ss-works",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600&q=80",
-    label: "Steel Angles & Channels",
-    category: "products",
+    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=600&q=80",
+    label: "SS Doors & Railings",
+    category: "ss-works",
   },
-
-  // Stockyard
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
-    label: "Our Stockyard",
-    category: "stockyard",
+    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+    label: "SS Balcony Railing",
+    category: "ss-works",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=80",
-    label: "Industrial Warehouse",
-    category: "stockyard",
+    src: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=600&q=80",
+    label: "SS Staircase Handrail",
+    category: "ss-works",
   },
+
+  // ═══════════════════════════════════════════════════
+  // SHUTTERS
+  // ═══════════════════════════════════════════════════
   {
     id: 8,
-    src: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1567789884554-0b844b597180?w=600&q=80",
-    label: "Steel Inventory",
-    category: "stockyard",
+    src: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80",
+    label: "Manual Rolling Shutter",
+    category: "shutters",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1535813547-99c456a41d4a?w=600&q=80",
-    label: "Coil Storage Area",
-    category: "stockyard",
+    src: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=600&q=80",
+    label: "Automatic Shutter",
+    category: "shutters",
   },
-
-  // Delivery
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=80",
-    label: "Loading for Delivery",
-    category: "delivery",
+    src: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&q=80",
+    label: "Shop Shutter Installation",
+    category: "shutters",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80",
-    label: "Transport Fleet",
-    category: "delivery",
+    src: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=600&q=80",
+    label: "Warehouse Shutter",
+    category: "shutters",
   },
+
+  // ═══════════════════════════════════════════════════
+  // WORKSHOP / PROCESS
+  // ═══════════════════════════════════════════════════
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=1200&q=80",
-    thumb: "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=600&q=80",
-    label: "Site Delivery",
-    category: "delivery",
+    src: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=600&q=80",
+    label: "Our Workshop",
+    category: "workshop",
+  },
+  {
+    id: 13,
+    src: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1565793298595-6a879b1d9492?w=600&q=80",
+    label: "Steel Material Storage",
+    category: "workshop",
+  },
+  {
+    id: 14,
+    src: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80",
+    thumb: "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&q=80",
+    label: "Fabrication in Progress",
+    category: "workshop",
   },
 ];
