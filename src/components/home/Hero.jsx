@@ -11,7 +11,7 @@ import { fadeUp, staggerContainer } from "../../utils/animations";
 
 const stats = [
   { num: "10+", label: "Years Experience" },
-  { num: "500+", label: "Happy Clients" },
+  { num: "1000+", label: "Projects Delivered" },
   { num: "24/7", label: "Support" },
 ];
 
@@ -26,13 +26,13 @@ export default function Hero() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="/public/Home_Bg.png"
-          alt="Steel industry"
+          src="/Home_Bg.png"
+          alt="Iron & steel fabrication workshop"
           className="w-full h-full object-cover"
         />
       </motion.div>
 
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-navy via-navy/30 to-navy/30" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-navy via-navy/85 to-navy/30" />
 
       <div
         className="absolute inset-0 z-10 opacity-30 pointer-events-none"
@@ -49,7 +49,7 @@ export default function Hero() {
         className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-brand-orange/15 rounded-full blur-3xl z-10 pointer-events-none"
       />
 
-      {/* Content — matches Navbar Container exactly */}
+      {/* Content */}
       <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-8 py-20 md:py-28">
         <motion.div
           variants={staggerContainer}
@@ -70,15 +70,15 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* Heading */}
+          {/* Heading — SHORTER to prevent overflow */}
           <motion.h1
             variants={fadeUp}
             custom={1}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-[1.05] tracking-tight mb-6"
           >
-            Quality Steel & Iron Works,
+            Iron, Steel
             <br />
-            <span className="text-brand-orange">Trusted Service</span>
+            <span className="text-brand-orange">& Shutters</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -87,9 +87,9 @@ export default function Hero() {
             custom={2}
             className="text-base md:text-lg text-white/75 mb-8 max-w-lg leading-relaxed"
           >
-            We supply high-quality iron and steel products for all your
-            construction and industrial needs — sourced from trusted mills,
-            tested for superior strength.
+            Custom iron cots, stainless steel furniture, doors, railings, and
+            rolling shutters — manufactured and installed by our expert team in
+            Pondicherry.
           </motion.p>
 
           {/* CTAs */}
